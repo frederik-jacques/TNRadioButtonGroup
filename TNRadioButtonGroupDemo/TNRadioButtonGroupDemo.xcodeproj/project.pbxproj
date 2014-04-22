@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86465FD41906ABD200E7FDE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FD31906ABD200E7FDE9 /* Foundation.framework */; };
+		86465FD61906ABD200E7FDE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FD51906ABD200E7FDE9 /* CoreGraphics.framework */; };
+		86465FD81906ABD200E7FDE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FD71906ABD200E7FDE9 /* UIKit.framework */; };
+		86465FDE1906ABD200E7FDE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86465FDC1906ABD200E7FDE9 /* InfoPlist.strings */; };
+		86465FE01906ABD200E7FDE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86465FDF1906ABD200E7FDE9 /* main.m */; };
+		86465FE41906ABD200E7FDE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86465FE31906ABD200E7FDE9 /* AppDelegate.m */; };
+		86465FE61906ABD200E7FDE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86465FE51906ABD200E7FDE9 /* Images.xcassets */; };
+		86465FED1906ABD200E7FDE9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FEC1906ABD200E7FDE9 /* XCTest.framework */; };
+		86465FEE1906ABD200E7FDE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FD31906ABD200E7FDE9 /* Foundation.framework */; };
+		86465FEF1906ABD200E7FDE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86465FD71906ABD200E7FDE9 /* UIKit.framework */; };
+		86465FF71906ABD200E7FDE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86465FF51906ABD200E7FDE9 /* InfoPlist.strings */; };
+		86465FF91906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86465FF81906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m */; };
+		86CEDB651906B1F1004B016A /* TNCircularRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB5C1906B1F1004B016A /* TNCircularRadioButton.m */; };
+		86CEDB661906B1F1004B016A /* TNRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB5E1906B1F1004B016A /* TNRadioButton.m */; };
+		86CEDB671906B1F1004B016A /* TNRadioButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB601906B1F1004B016A /* TNRadioButtonGroup.m */; };
+		86CEDB721906B4F9004B016A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB711906B4F9004B016A /* MainViewController.m */; };
+		86CEDB761906B50A004B016A /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB751906B50A004B016A /* MainView.m */; };
+		86CEDB891906FDE1004B016A /* TNRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB881906FDE1004B016A /* TNRadioButtonData.m */; };
+		86CEDB8C1906FDEA004B016A /* TNCircularRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB8B1906FDEA004B016A /* TNCircularRadioButtonData.m */; };
+		86CEDBA019070464004B016A /* TNRectangularRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDB9F19070464004B016A /* TNRectangularRadioButtonData.m */; };
+		86CEDBA31907046D004B016A /* TNRectangularRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA21907046D004B016A /* TNRectangularRadioButton.m */; };
+		86CEDBA619070476004B016A /* TNImageRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA519070476004B016A /* TNImageRadioButtonData.m */; };
+		86CEDBA919070483004B016A /* TNImageRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA819070483004B016A /* TNImageRadioButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86465FF01906ABD200E7FDE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86465FC81906ABD200E7FDE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86465FCF1906ABD200E7FDE9;
+			remoteInfo = TNRadioButtonGroupDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86465FD01906ABD200E7FDE9 /* TNRadioButtonGroupDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNRadioButtonGroupDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86465FD31906ABD200E7FDE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		86465FD51906ABD200E7FDE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		86465FD71906ABD200E7FDE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		86465FDB1906ABD200E7FDE9 /* TNRadioButtonGroupDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNRadioButtonGroupDemo-Info.plist"; sourceTree = "<group>"; };
+		86465FDD1906ABD200E7FDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86465FDF1906ABD200E7FDE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86465FE11906ABD200E7FDE9 /* TNRadioButtonGroupDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNRadioButtonGroupDemo-Prefix.pch"; sourceTree = "<group>"; };
+		86465FE21906ABD200E7FDE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86465FE31906ABD200E7FDE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86465FE51906ABD200E7FDE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		86465FEB1906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNRadioButtonGroupDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86465FEC1906ABD200E7FDE9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		86465FF41906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNRadioButtonGroupDemoTests-Info.plist"; sourceTree = "<group>"; };
+		86465FF61906ABD200E7FDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86465FF81906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNRadioButtonGroupDemoTests.m; sourceTree = "<group>"; };
+		86CEDB5B1906B1F1004B016A /* TNCircularRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularRadioButton.h; path = ../../src/TNCircularRadioButton.h; sourceTree = "<group>"; };
+		86CEDB5C1906B1F1004B016A /* TNCircularRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularRadioButton.m; path = ../../src/TNCircularRadioButton.m; sourceTree = "<group>"; };
+		86CEDB5D1906B1F1004B016A /* TNRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButton.h; path = ../../src/TNRadioButton.h; sourceTree = "<group>"; };
+		86CEDB5E1906B1F1004B016A /* TNRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRadioButton.m; path = ../../src/TNRadioButton.m; sourceTree = "<group>"; };
+		86CEDB5F1906B1F1004B016A /* TNRadioButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButtonGroup.h; path = ../../src/TNRadioButtonGroup.h; sourceTree = "<group>"; };
+		86CEDB601906B1F1004B016A /* TNRadioButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRadioButtonGroup.m; path = ../../src/TNRadioButtonGroup.m; sourceTree = "<group>"; };
+		86CEDB701906B4F9004B016A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		86CEDB711906B4F9004B016A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		86CEDB741906B50A004B016A /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		86CEDB751906B50A004B016A /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		86CEDB871906FDE1004B016A /* TNRadioButtonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButtonData.h; path = ../../src/TNRadioButtonData.h; sourceTree = "<group>"; };
+		86CEDB881906FDE1004B016A /* TNRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRadioButtonData.m; path = ../../src/TNRadioButtonData.m; sourceTree = "<group>"; };
+		86CEDB8A1906FDEA004B016A /* TNCircularRadioButtonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularRadioButtonData.h; path = ../../src/TNCircularRadioButtonData.h; sourceTree = "<group>"; };
+		86CEDB8B1906FDEA004B016A /* TNCircularRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularRadioButtonData.m; path = ../../src/TNCircularRadioButtonData.m; sourceTree = "<group>"; };
+		86CEDB9D19070457004B016A /* TNRadioButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButtonDelegate.h; path = ../../src/TNRadioButtonDelegate.h; sourceTree = "<group>"; };
+		86CEDB9E19070464004B016A /* TNRectangularRadioButtonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRectangularRadioButtonData.h; path = ../../src/TNRectangularRadioButtonData.h; sourceTree = "<group>"; };
+		86CEDB9F19070464004B016A /* TNRectangularRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularRadioButtonData.m; path = ../../src/TNRectangularRadioButtonData.m; sourceTree = "<group>"; };
+		86CEDBA11907046D004B016A /* TNRectangularRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRectangularRadioButton.h; path = ../../src/TNRectangularRadioButton.h; sourceTree = "<group>"; };
+		86CEDBA21907046D004B016A /* TNRectangularRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularRadioButton.m; path = ../../src/TNRectangularRadioButton.m; sourceTree = "<group>"; };
+		86CEDBA419070476004B016A /* TNImageRadioButtonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageRadioButtonData.h; path = ../../src/TNImageRadioButtonData.h; sourceTree = "<group>"; };
+		86CEDBA519070476004B016A /* TNImageRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageRadioButtonData.m; path = ../../src/TNImageRadioButtonData.m; sourceTree = "<group>"; };
+		86CEDBA719070483004B016A /* TNImageRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageRadioButton.h; path = ../../src/TNImageRadioButton.h; sourceTree = "<group>"; };
+		86CEDBA819070483004B016A /* TNImageRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageRadioButton.m; path = ../../src/TNImageRadioButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86465FCD1906ABD200E7FDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FD61906ABD200E7FDE9 /* CoreGraphics.framework in Frameworks */,
+				86465FD81906ABD200E7FDE9 /* UIKit.framework in Frameworks */,
+				86465FD41906ABD200E7FDE9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86465FE81906ABD200E7FDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FED1906ABD200E7FDE9 /* XCTest.framework in Frameworks */,
+				86465FEF1906ABD200E7FDE9 /* UIKit.framework in Frameworks */,
+				86465FEE1906ABD200E7FDE9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86465FC71906ABD200E7FDE9 = {
+			isa = PBXGroup;
+			children = (
+				86465FD91906ABD200E7FDE9 /* TNRadioButtonGroupDemo */,
+				86465FF21906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests */,
+				86465FD21906ABD200E7FDE9 /* Frameworks */,
+				86465FD11906ABD200E7FDE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86465FD11906ABD200E7FDE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86465FD01906ABD200E7FDE9 /* TNRadioButtonGroupDemo.app */,
+				86465FEB1906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86465FD21906ABD200E7FDE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86465FD31906ABD200E7FDE9 /* Foundation.framework */,
+				86465FD51906ABD200E7FDE9 /* CoreGraphics.framework */,
+				86465FD71906ABD200E7FDE9 /* UIKit.framework */,
+				86465FEC1906ABD200E7FDE9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86465FD91906ABD200E7FDE9 /* TNRadioButtonGroupDemo */ = {
+			isa = PBXGroup;
+			children = (
+				86465FE21906ABD200E7FDE9 /* AppDelegate.h */,
+				86465FE31906ABD200E7FDE9 /* AppDelegate.m */,
+				86CEDB731906B4FF004B016A /* View controllers */,
+				864660021906ABDF00E7FDE9 /* TNRadioButtonGroup */,
+				86465FE51906ABD200E7FDE9 /* Images.xcassets */,
+				86465FDA1906ABD200E7FDE9 /* Supporting Files */,
+			);
+			path = TNRadioButtonGroupDemo;
+			sourceTree = "<group>";
+		};
+		86465FDA1906ABD200E7FDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86465FDB1906ABD200E7FDE9 /* TNRadioButtonGroupDemo-Info.plist */,
+				86465FDC1906ABD200E7FDE9 /* InfoPlist.strings */,
+				86465FDF1906ABD200E7FDE9 /* main.m */,
+				86465FE11906ABD200E7FDE9 /* TNRadioButtonGroupDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86465FF21906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				86465FF81906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m */,
+				86465FF31906ABD200E7FDE9 /* Supporting Files */,
+			);
+			path = TNRadioButtonGroupDemoTests;
+			sourceTree = "<group>";
+		};
+		86465FF31906ABD200E7FDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86465FF41906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests-Info.plist */,
+				86465FF51906ABD200E7FDE9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		864660021906ABDF00E7FDE9 /* TNRadioButtonGroup */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB5F1906B1F1004B016A /* TNRadioButtonGroup.h */,
+				86CEDB601906B1F1004B016A /* TNRadioButtonGroup.m */,
+				86CEDB7A1906D972004B016A /* Data */,
+				86CEDB6D1906B211004B016A /* Types */,
+			);
+			name = TNRadioButtonGroup;
+			sourceTree = "<group>";
+		};
+		86CEDB6D1906B211004B016A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB6F1906B22E004B016A /* Base */,
+				86CEDB6E1906B229004B016A /* Circular */,
+				86CEDB8D1906FDF5004B016A /* Rectangle */,
+				86CEDB95190700F5004B016A /* Image */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		86CEDB6E1906B229004B016A /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB7F1906E5AA004B016A /* Data */,
+				86CEDB5B1906B1F1004B016A /* TNCircularRadioButton.h */,
+				86CEDB5C1906B1F1004B016A /* TNCircularRadioButton.m */,
+			);
+			name = Circular;
+			sourceTree = "<group>";
+		};
+		86CEDB6F1906B22E004B016A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB5D1906B1F1004B016A /* TNRadioButton.h */,
+				86CEDB5E1906B1F1004B016A /* TNRadioButton.m */,
+				86CEDB9D19070457004B016A /* TNRadioButtonDelegate.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		86CEDB731906B4FF004B016A /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB701906B4F9004B016A /* MainViewController.h */,
+				86CEDB711906B4F9004B016A /* MainViewController.m */,
+				86CEDB741906B50A004B016A /* MainView.h */,
+				86CEDB751906B50A004B016A /* MainView.m */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		86CEDB7A1906D972004B016A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB871906FDE1004B016A /* TNRadioButtonData.h */,
+				86CEDB881906FDE1004B016A /* TNRadioButtonData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86CEDB7F1906E5AA004B016A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB8A1906FDEA004B016A /* TNCircularRadioButtonData.h */,
+				86CEDB8B1906FDEA004B016A /* TNCircularRadioButtonData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86CEDB8D1906FDF5004B016A /* Rectangle */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB8E1906FDFE004B016A /* Data */,
+				86CEDBA11907046D004B016A /* TNRectangularRadioButton.h */,
+				86CEDBA21907046D004B016A /* TNRectangularRadioButton.m */,
+			);
+			name = Rectangle;
+			sourceTree = "<group>";
+		};
+		86CEDB8E1906FDFE004B016A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB9E19070464004B016A /* TNRectangularRadioButtonData.h */,
+				86CEDB9F19070464004B016A /* TNRectangularRadioButtonData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86CEDB95190700F5004B016A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDB9919070122004B016A /* Data */,
+				86CEDBA719070483004B016A /* TNImageRadioButton.h */,
+				86CEDBA819070483004B016A /* TNImageRadioButton.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		86CEDB9919070122004B016A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86CEDBA419070476004B016A /* TNImageRadioButtonData.h */,
+				86CEDBA519070476004B016A /* TNImageRadioButtonData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86465FCF1906ABD200E7FDE9 /* TNRadioButtonGroupDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86465FFC1906ABD200E7FDE9 /* Build configuration list for PBXNativeTarget "TNRadioButtonGroupDemo" */;
+			buildPhases = (
+				86465FCC1906ABD200E7FDE9 /* Sources */,
+				86465FCD1906ABD200E7FDE9 /* Frameworks */,
+				86465FCE1906ABD200E7FDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNRadioButtonGroupDemo;
+			productName = TNRadioButtonGroupDemo;
+			productReference = 86465FD01906ABD200E7FDE9 /* TNRadioButtonGroupDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86465FEA1906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86465FFF1906ABD200E7FDE9 /* Build configuration list for PBXNativeTarget "TNRadioButtonGroupDemoTests" */;
+			buildPhases = (
+				86465FE71906ABD200E7FDE9 /* Sources */,
+				86465FE81906ABD200E7FDE9 /* Frameworks */,
+				86465FE91906ABD200E7FDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86465FF11906ABD200E7FDE9 /* PBXTargetDependency */,
+			);
+			name = TNRadioButtonGroupDemoTests;
+			productName = TNRadioButtonGroupDemoTests;
+			productReference = 86465FEB1906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86465FC81906ABD200E7FDE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Frederik Jacques";
+				TargetAttributes = {
+					86465FEA1906ABD200E7FDE9 = {
+						TestTargetID = 86465FCF1906ABD200E7FDE9;
+					};
+				};
+			};
+			buildConfigurationList = 86465FCB1906ABD200E7FDE9 /* Build configuration list for PBXProject "TNRadioButtonGroupDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 86465FC71906ABD200E7FDE9;
+			productRefGroup = 86465FD11906ABD200E7FDE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86465FCF1906ABD200E7FDE9 /* TNRadioButtonGroupDemo */,
+				86465FEA1906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86465FCE1906ABD200E7FDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FDE1906ABD200E7FDE9 /* InfoPlist.strings in Resources */,
+				86465FE61906ABD200E7FDE9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86465FE91906ABD200E7FDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FF71906ABD200E7FDE9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86465FCC1906ABD200E7FDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FE41906ABD200E7FDE9 /* AppDelegate.m in Sources */,
+				86CEDBA019070464004B016A /* TNRectangularRadioButtonData.m in Sources */,
+				86CEDB8C1906FDEA004B016A /* TNCircularRadioButtonData.m in Sources */,
+				86CEDB891906FDE1004B016A /* TNRadioButtonData.m in Sources */,
+				86465FE01906ABD200E7FDE9 /* main.m in Sources */,
+				86CEDB721906B4F9004B016A /* MainViewController.m in Sources */,
+				86CEDBA31907046D004B016A /* TNRectangularRadioButton.m in Sources */,
+				86CEDBA919070483004B016A /* TNImageRadioButton.m in Sources */,
+				86CEDB761906B50A004B016A /* MainView.m in Sources */,
+				86CEDBA619070476004B016A /* TNImageRadioButtonData.m in Sources */,
+				86CEDB651906B1F1004B016A /* TNCircularRadioButton.m in Sources */,
+				86CEDB661906B1F1004B016A /* TNRadioButton.m in Sources */,
+				86CEDB671906B1F1004B016A /* TNRadioButtonGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86465FE71906ABD200E7FDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86465FF91906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86465FF11906ABD200E7FDE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86465FCF1906ABD200E7FDE9 /* TNRadioButtonGroupDemo */;
+			targetProxy = 86465FF01906ABD200E7FDE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86465FDC1906ABD200E7FDE9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86465FDD1906ABD200E7FDE9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		86465FF51906ABD200E7FDE9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86465FF61906ABD200E7FDE9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86465FFA1906ABD200E7FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		86465FFB1906ABD200E7FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86465FFD1906ABD200E7FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		86465FFE1906ABD200E7FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		864660001906ABD200E7FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNRadioButtonGroupDemo.app/TNRadioButtonGroupDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TNRadioButtonGroupDemoTests/TNRadioButtonGroupDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		864660011906ABD200E7FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNRadioButtonGroupDemo.app/TNRadioButtonGroupDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNRadioButtonGroupDemo/TNRadioButtonGroupDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNRadioButtonGroupDemoTests/TNRadioButtonGroupDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86465FCB1906ABD200E7FDE9 /* Build configuration list for PBXProject "TNRadioButtonGroupDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86465FFA1906ABD200E7FDE9 /* Debug */,
+				86465FFB1906ABD200E7FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86465FFC1906ABD200E7FDE9 /* Build configuration list for PBXNativeTarget "TNRadioButtonGroupDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86465FFD1906ABD200E7FDE9 /* Debug */,
+				86465FFE1906ABD200E7FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86465FFF1906ABD200E7FDE9 /* Build configuration list for PBXNativeTarget "TNRadioButtonGroupDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864660001906ABD200E7FDE9 /* Debug */,
+				864660011906ABD200E7FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86465FC81906ABD200E7FDE9 /* Project object */;
+}
