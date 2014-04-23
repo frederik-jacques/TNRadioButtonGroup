@@ -17,8 +17,13 @@ The current version supports 3 different radio buttons:
 Installation
 =============
 
+##Manual
 * Just drag the files in the src folder to your project.
 * Import the radio button class you want to use
+
+##Cocoapods
+* Add ``` pod 'TNRadioButtonGroup' ``` to your Podfile
+* Done
 
 How to use
 ==========
