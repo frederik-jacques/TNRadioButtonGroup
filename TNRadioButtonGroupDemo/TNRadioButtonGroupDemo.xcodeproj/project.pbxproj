@@ -59,6 +59,7 @@
 		86465FF41906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNRadioButtonGroupDemoTests-Info.plist"; sourceTree = "<group>"; };
 		86465FF61906ABD200E7FDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86465FF81906ABD200E7FDE9 /* TNRadioButtonGroupDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNRadioButtonGroupDemoTests.m; sourceTree = "<group>"; };
+		86BA542D19098A3200E75362 /* TNRadioButtonGroupProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButtonGroupProtocol.h; path = ../../src/TNRadioButtonGroupProtocol.h; sourceTree = "<group>"; };
 		86CEDB5B1906B1F1004B016A /* TNCircularRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularRadioButton.h; path = ../../src/TNCircularRadioButton.h; sourceTree = "<group>"; };
 		86CEDB5C1906B1F1004B016A /* TNCircularRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularRadioButton.m; path = ../../src/TNCircularRadioButton.m; sourceTree = "<group>"; };
 		86CEDB5D1906B1F1004B016A /* TNRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRadioButton.h; path = ../../src/TNRadioButton.h; sourceTree = "<group>"; };
@@ -183,12 +184,21 @@
 		864660021906ABDF00E7FDE9 /* TNRadioButtonGroup */ = {
 			isa = PBXGroup;
 			children = (
+				86BA542B1909896300E75362 /* Protocol */,
 				86CEDB5F1906B1F1004B016A /* TNRadioButtonGroup.h */,
 				86CEDB601906B1F1004B016A /* TNRadioButtonGroup.m */,
 				86CEDB7A1906D972004B016A /* Data */,
 				86CEDB6D1906B211004B016A /* Types */,
 			);
 			name = TNRadioButtonGroup;
+			sourceTree = "<group>";
+		};
+		86BA542B1909896300E75362 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				86BA542D19098A3200E75362 /* TNRadioButtonGroupProtocol.h */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		86CEDB6D1906B211004B016A /* Types */ = {

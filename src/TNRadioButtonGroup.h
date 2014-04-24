@@ -14,9 +14,9 @@
 extern NSString *const SELECTED_RADIO_BUTTON_CHANGED;
 
 typedef enum : NSUInteger {
-    TNRadioButtonGroupStyleHorizontal,
-    TNRadioButtonGroupStyleVertical
-} TNRadioButtonGroupStyle;
+    TNRadioButtonGroupLayoutHorizontal,
+    TNRadioButtonGroupLayoutVertical
+} TNRadioButtonGroupLayout;
 
 @interface TNRadioButtonGroup : UIView <TNRadioButtonDelegate>
 
@@ -24,9 +24,12 @@ typedef enum : NSUInteger {
 @property (nonatomic) CGPoint position;
 @property (nonatomic) NSInteger marginBetweenItems;
 
+@property (nonatomic, strong) UIFont *labelFont;
+@property (nonatomic, strong) UIColor *labelColor;
+
 @property (nonatomic, strong) NSArray *radioButtons;
 @property (nonatomic, weak) TNRadioButton *selectedRadioButton;
 
-- (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData style:(TNRadioButtonGroupStyle)style;
+- (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData layout:(TNRadioButtonGroupLayout)layout;
 - (void)create;
 @end

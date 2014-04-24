@@ -11,21 +11,9 @@
 
 @implementation TNRadioButtonData
 
-- (instancetype)init {
-
-    self = [super init];
-    
-    if (self) {
-
-    }
-    
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected {
-    
-    _selected = selected;
-    
+#pragma mark - Debug
+- (NSString *)description {
+    return [NSString stringWithFormat:@"[TNRadioButtonData] Identifier: %@ - Tag: %i - Selected: %d", self.identifier, self.tag, self.selected];
 }
 
 @end

@@ -36,12 +36,12 @@
 #pragma mark - Creation
 - (void)setup{
     
-    [self createCircularRadioButton];
+    [self createRadioButton];
     
     [super setup];
 }
 
-- (void)createCircularRadioButton {
+- (void)createRadioButton {
     self.radioButton = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius)];
     
     UIBezierPath *borderPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius)];

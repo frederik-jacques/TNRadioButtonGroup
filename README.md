@@ -12,7 +12,7 @@ The current version supports 3 different radio buttons:
 
 3. Custom image radio button
 
-![Screenshot](http://cl.ly/V8Hq/download/Screen%20Shot%202014-04-22%20at%2022.27.42.png)
+![Screenshot](http://cl.ly/VBJJ/tnradiobuttongroup.png)
 
 Installation
 =============
@@ -41,6 +41,8 @@ Property  | What does it do
  identifier    | Set a human readeble name for the radio button
  labelText    | Set the text for the label
  selected    | Set the selected state
+ labelFont    | Set the font for the label
+ labelColor    | Set the color for the label
 
 The different classes have the following extra properties:
 
@@ -102,11 +104,13 @@ Example
     coldData.unselectedImage = [UIImage imageNamed:@"unchecked"];
     coldData.selectedImage = [UIImage imageNamed:@"checked"];
 
-When you have created the different data objects, you can create an instance of ```TNRadioButtonGroup``` and pass an array with the data objects and set the style. The style can be horizontal or vertical.
+When you have created the different data objects, you can create an instance of ```TNRadioButtonGroup``` and pass an array with the data objects and set the layout. The layout can be horizontal or vertical.
+
+You can also set the margin between each item via the ``` marginBetweenItems ``` property. By default it's set to 15 pixels.
 
 If you want, you can also set the ``` identifier``` property to have a human readable name for the group.
 
-Call the ```create``` method and set the ```position``` property to place the group at a specific point.
+Call the ```create``` method and set the ```position``` property to place the group at a specific point.  Don't worry about the frame, this will be automatically calculated.
 And add the object to the view hierarchy.
 
     self.myGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[data1, data2, data3] style:TNRadioButtonGroupStyleHorizontal];
@@ -117,8 +121,7 @@ And add the object to the view hierarchy.
 
 Done!
 
-Getting change notifications
-=============================
+##Getting change notifications
 
 When the state of the radio button group has changed an _NSNotification_ is broadcasted.
 
@@ -126,10 +129,36 @@ You can listen to the ``` SELECTED_RADIO_BUTTON_CHANGED ``` message.
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myGroupGotUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.myGroup];
 
-# Demo
+## Styling checkboxes
+### Group-level
+If you want to provide the same label font and color for all radio buttons in a specific group, you can set the ``` labelFont ``` and ```labelColor ``` properties.
+
+### Checkbox-level
+If you want to provide different label fonts and/or colors for specific radio buttons in a group, you can set the ``` labelFont ``` and ``` labelColor ``` properties on the TNRadioButton subclass.
+
+Creating custom radio buttons
+===========================
+If you want it is really easy to add your own custom radio buttons.
+
+1. Create a data model class in which you store the specific data for your checkbox. This class needs to extend ``` TNRadioButtonData ```.
+
+2. Create a radio button class which extends ``` TNRadioButton ```.
+
+3. Override the ``` setup ``` method (don't forget to call the super method at the end).
+
+4. Override the ``` createRadioButton ``` method, here you can draw your custom radio button.
+
+5. Override the ``` checkWithAnimation: ``` method to supply your own animations when the radio button state changes.
+
+6. There is no step 6.
+
+
+Demo
+=====
 There is a demo project added to this repository, so you can see how it works.
 
-# License
+License
+=======
 TNRadioButtonGroup published under the MIT license:
 
 Copyright (C) 2014, Frederik Jacques

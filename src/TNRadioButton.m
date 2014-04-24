@@ -8,6 +8,10 @@
 
 #import "TNRadioButton.h"
 
+@interface TNRadioButton()
+
+@end
+
 @implementation TNRadioButton
 
 - (instancetype)initWithData:(TNRadioButtonData *)data {
@@ -30,6 +34,8 @@
     self.frame = self.btnHidden.frame;
 }
 
+- (void)createRadioButton {}
+
 - (void)createLabel {
     
     CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
@@ -37,8 +43,8 @@
     self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelRect.size.height) / 2, labelRect.size.width, labelRect.size.height)];
     self.lblLabel.numberOfLines = 0;
     self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.lblLabel.font = [UIFont systemFontOfSize:14];
-    self.lblLabel.textColor = [UIColor blackColor];
+    self.lblLabel.font = self.data.labelFont;
+    self.lblLabel.textColor = self.data.labelColor;
     self.lblLabel.text = self.data.labelText;
     [self addSubview:self.lblLabel];
 }

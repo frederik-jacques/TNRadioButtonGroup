@@ -11,6 +11,8 @@
 
 @interface MainView : UIView
 
+@property (nonatomic, strong) UIImageView *background;
+
 @property (nonatomic, strong) TNRadioButtonGroup *sexGroup;
 @property (nonatomic, strong) TNRadioButtonGroup *hobbiesGroup;
 @property (nonatomic, strong) TNRadioButtonGroup *temperatureGroup;

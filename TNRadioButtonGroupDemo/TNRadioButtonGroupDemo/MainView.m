@@ -16,6 +16,9 @@
     
     if (self) {
         // Initialization code
+        self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+        [self addSubview:self.background];
+        
         [self createHorizontalList];
         [self createVerticalList];
         [self createHorizontalListWithImage];
@@ -49,10 +52,10 @@
     alienData.borderRadius = 12;
     alienData.circleRadius = 5;
     
-    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData] style:TNRadioButtonGroupStyleHorizontal];
+    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData] layout:TNRadioButtonGroupLayoutHorizontal];
     self.sexGroup.identifier = @"Sex group";
     [self.sexGroup create];
-    self.sexGroup.position = CGPointMake(15, 50);
+    self.sexGroup.position = CGPointMake(25, 175);
     [self addSubview:self.sexGroup];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
@@ -83,10 +86,10 @@
     programmingData.borderWidth = programmingData.borderHeight = 12;
     programmingData.rectangleWidth = programmingData.rectangleHeight = 5;
     
-    self.hobbiesGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[snowboardData,tennisData, programmingData] style:TNRadioButtonGroupStyleVertical];
+    self.hobbiesGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[snowboardData,tennisData, programmingData] layout:TNRadioButtonGroupLayoutVertical];
     self.hobbiesGroup.identifier = @"Hobbies group";
     [self.hobbiesGroup create];
-    self.hobbiesGroup.position = CGPointMake(15, 100);
+    self.hobbiesGroup.position = CGPointMake(25, 265);
 
     [self addSubview:self.hobbiesGroup];
     
@@ -109,10 +112,10 @@
     hotData.unselectedImage = [UIImage imageNamed:@"unchecked"];
     hotData.selectedImage = [UIImage imageNamed:@"checked"];
     
-    self.temperatureGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[coldData, hotData] style:TNRadioButtonGroupStyleVertical];
+    self.temperatureGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[coldData, hotData] layout:TNRadioButtonGroupLayoutVertical];
     self.temperatureGroup.identifier = @"Temperature group";
     [self.temperatureGroup create];
-    self.temperatureGroup.position = CGPointMake(15, self.hobbiesGroup.frame.origin.y + self.hobbiesGroup.frame.size.height + 20);
+    self.temperatureGroup.position = CGPointMake(25, 400);
     
     [self addSubview:self.temperatureGroup];
     
@@ -129,6 +132,12 @@
 
 - (void)temperatureGroupUpdated:(NSNotification *)notification {
     NSLog(@"[MainView] Temperature group updated to %@", self.temperatureGroup.selectedRadioButton.data.identifier);
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.hobbiesGroup];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.temperatureGroup];
 }
 
 @end
