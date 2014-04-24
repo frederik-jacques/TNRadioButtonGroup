@@ -13,7 +13,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
 @interface TNRadioButtonGroup()
 
 @property (nonatomic, strong) NSArray *radioButtonData;
-@property (nonatomic) TNRadioButtonGroupStyle style;
+@property (nonatomic) TNRadioButtonGroupLayout layout;
 @property (nonatomic) NSInteger widthOfComponent;
 @property (nonatomic) NSInteger heightOfComponent;
 
@@ -21,19 +21,21 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
 
 @implementation TNRadioButtonGroup
 
-- (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData style:(TNRadioButtonGroupStyle)style {
+#pragma mark - Initializers
+- (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData layout:(TNRadioButtonGroupLayout)layout {
     
     self = [super init];
     
     if (self) {
         self.radioButtonData = radioButtonData;
-        self.style = style;
+        self.layout = layout;
         self.marginBetweenItems = 15;
     }
     
     return self;
 }
 
+#pragma mark - Setup
 - (void)create {
     [self createRadioButtons];
     
@@ -52,6 +54,9 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     for (TNRadioButtonData *data in self.radioButtonData) {
         
         TNRadioButton *radioButton = nil;
+        
+        if( !data.labelFont) data.labelFont = self.labelFont;
+        if( !data.labelColor) data.labelColor = self.labelColor;
         
         if( [data isKindOfClass:[TNCircularRadioButtonData class]] ){
             radioButton = [[TNCircularRadioButton alloc] initWithData:(TNCircularRadioButtonData *)data];
@@ -72,7 +77,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
 
         CGRect frame;
         
-        if( self.style == TNRadioButtonGroupStyleHorizontal ){
+        if( self.layout == TNRadioButtonGroupLayoutHorizontal ){
             frame = CGRectMake(xPos, 0, radioButton.frame.size.width, radioButton.frame.size.height);
         }else{
             frame = CGRectMake(0, yPos, radioButton.frame.size.width, radioButton.frame.size.height);
@@ -85,7 +90,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         yPos += radioButton.frame.size.height + self.marginBetweenItems;
         maxHeight = MAX(maxHeight, radioButton.frame.size.height);
         
-        if( self.style == TNRadioButtonGroupStyleVertical ){
+        if( self.layout == TNRadioButtonGroupLayoutVertical ){
             maxHeight = yPos;
         }
         
@@ -102,6 +107,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     self.radioButtons = [NSArray arrayWithArray:tmp];
 }
 
+#pragma mark - TNRadioButtonDelegate methods
 - (void)radioButtonDidChange:(TNRadioButton *)radioButton {
     
     for (TNRadioButton *rb in self.radioButtons) {
@@ -116,6 +122,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     self.selectedRadioButton = radioButton;
 }
 
+#pragma mark - Getters / Setters
 - (void)setSelectedRadioButton:(TNRadioButton *)selectedRadioButton {
     
     if( _selectedRadioButton != selectedRadioButton ){
@@ -131,5 +138,25 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     self.frame = CGRectMake(position.x, position.y, self.frame.size.width, self.frame.size.height);
     
 }
+
+- (UIColor *)labelColor {
+    
+    if( !_labelColor ){
+        _labelColor = [UIColor blackColor];
+    }
+    
+    return _labelColor;
+    
+}
+
+- (UIFont *)labelFont {
+    
+    if( !_labelFont ){
+        _labelFont = [UIFont systemFontOfSize:14];
+    }
+    
+    return  _labelFont;
+}
+
 
 @end

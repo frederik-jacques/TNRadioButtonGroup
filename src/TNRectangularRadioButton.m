@@ -36,12 +36,12 @@
 #pragma mark - Creation
 - (void)setup{
     
-    [self createRectangularRadioButton];
+    [self createRadioButton];
     
     [super setup];
 }
 
-- (void)createRectangularRadioButton {
+- (void)createRadioButton {
     self.radioButton = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight)];
     
     UIBezierPath *borderPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight)];

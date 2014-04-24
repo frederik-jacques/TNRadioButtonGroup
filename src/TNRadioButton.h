@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "TNRadioButtonData.h"
 #import "TNRadioButtonDelegate.h"
+#import "TNRadioButtonGroupProtocol.h"
 
 #import "TNCircularRadioButtonData.h"
 #import "TNRectangularRadioButtonData.h"
 #import "TNImageRadioButtonData.h"
 
-@interface TNRadioButton : UIView
+@interface TNRadioButton : UIView <TNRadioButtonGroupProtocol>
 
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *label;
