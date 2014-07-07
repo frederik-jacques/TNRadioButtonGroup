@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "6.0"
 
   s.source       = { :git => "https://github.com/frederik-jacques/TNRadioButtonGroup.git", 
-  :tag => "0.2" 
+  :tag => "0.3" 
   }
 
   s.source_files  = "src/*.{h,m}"
