@@ -13,7 +13,7 @@
 
 #pragma mark - Debug
 - (NSString *)description {
-    return [NSString stringWithFormat:@"[TNRadioButtonData] Identifier: %@ - Tag: %i - Selected: %d", self.identifier, self.tag, self.selected];
+    return [NSString stringWithFormat:@"[TNRadioButtonData] Identifier: %@ - Tag: %li - Selected: %d", self.identifier, (long)self.tag, self.selected];
 }
 
 @end

@@ -38,9 +38,20 @@
 
 - (void)createLabel {
     
-    CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
+    CGSize labelSize;
     
-    self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelRect.size.height) / 2, labelRect.size.width, labelRect.size.height)];
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        labelSize = [self.data.labelText sizeWithFont:[UIFont systemFontOfSize:14] forWidth:150 lineBreakMode:NSLineBreakByWordWrapping];
+        
+    } else {
+        CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
+        
+        labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
+        
+    }
+
+    self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelSize.height) / 2, labelSize.width, labelSize.height)];
+    self.lblLabel.backgroundColor = [UIColor clearColor];
     self.lblLabel.numberOfLines = 0;
     self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.lblLabel.font = self.data.labelFont;

@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>83E916F8-60AA-4292-A8DE-3B767F41D87A</string>
+	<string>AAA77F9F-DE6A-43C0-9478-99E70B2B7284</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TNRadioButtonGroupDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F74242CA-6E24-4D45-8B3A-E668122F0942</key>
+		<key>E5CC9469-DF8C-4F36-B2AB-58D75B750D27</key>
 		<string>https://github.com/frederik-jacques/TNRadioButtonGroup.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TNRadioButtonGroupDemo/TNRadioButtonGroupDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F74242CA-6E24-4D45-8B3A-E668122F0942</key>
+		<key>E5CC9469-DF8C-4F36-B2AB-58D75B750D27</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F74242CA-6E24-4D45-8B3A-E668122F0942</string>
+	<string>E5CC9469-DF8C-4F36-B2AB-58D75B750D27</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F74242CA-6E24-4D45-8B3A-E668122F0942</string>
+			<string>E5CC9469-DF8C-4F36-B2AB-58D75B750D27</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TNRadioButtonGroup</string>
 		</dict>
