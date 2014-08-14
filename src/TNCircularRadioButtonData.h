@@ -16,4 +16,6 @@
 @property (nonatomic) NSInteger borderRadius;
 @property (nonatomic) NSInteger circleRadius;
 
+@property (nonatomic) CGFloat circleLineThickness;
+
 @end

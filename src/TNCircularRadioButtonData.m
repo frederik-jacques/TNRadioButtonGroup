@@ -58,4 +58,12 @@
     return _circleRadius;
 }
 
+- (CGFloat)circleLineThickness {
+	if( !_circleLineThickness ){
+        _circleLineThickness = 2.0f;
+    }
+    
+    return _circleLineThickness;
+}
+
 @end
