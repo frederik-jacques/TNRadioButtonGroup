@@ -16,4 +16,14 @@
     return [NSString stringWithFormat:@"[TNRadioButtonData] Identifier: %@ - Tag: %li - Selected: %d", self.identifier, (long)self.tag, self.selected];
 }
 
+#pragma mark - Getters and setters
+-(UIFont *)labelFont {
+	
+	if (!_labelFont) {
+		_labelFont = [UIFont systemFontOfSize:14.0f];
+	}
+	
+	return _labelFont;
+}
+
 @end

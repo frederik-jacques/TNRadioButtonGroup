@@ -30,6 +30,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         self.radioButtonData = radioButtonData;
         self.layout = layout;
         self.marginBetweenItems = 15;
+		self.itemsInsets = UIEdgeInsetsZero;
     }
     
     return self;
@@ -44,8 +45,8 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
 
 - (void)createRadioButtons {
     
-    int xPos = 0;
-    int yPos = 0;
+    int xPos = _itemsInsets.left;
+    int yPos = _itemsInsets.top;
     int maxHeight = 0;
     int i = 0;
     
@@ -78,9 +79,9 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         CGRect frame;
         
         if( self.layout == TNRadioButtonGroupLayoutHorizontal ){
-            frame = CGRectMake(xPos, 0, radioButton.frame.size.width, radioButton.frame.size.height);
+            frame = CGRectMake(xPos, _itemsInsets.top, radioButton.frame.size.width, radioButton.frame.size.height);
         }else{
-            frame = CGRectMake(0, yPos, radioButton.frame.size.width, radioButton.frame.size.height);
+            frame = CGRectMake(_itemsInsets.left, yPos, radioButton.frame.size.width, radioButton.frame.size.height);
         }
         
         radioButton.frame = frame;

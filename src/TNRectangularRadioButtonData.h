@@ -18,4 +18,6 @@
 @property (nonatomic) NSInteger rectangleWidth;
 @property (nonatomic) NSInteger rectangleHeight;
 
+@property (nonatomic) CGFloat borderLineThickness;
+
 @end

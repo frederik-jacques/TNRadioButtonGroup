@@ -51,7 +51,7 @@
     self.border = [CAShapeLayer layer];
     self.border.path = borderPath.CGPath;
     self.border.frame = CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius);
-    self.border.lineWidth = 2;
+    self.border.lineWidth = self.data.circleLineThickness;
     self.border.strokeColor = self.data.borderColor.CGColor;
     self.border.fillColor = [UIColor clearColor].CGColor;
     

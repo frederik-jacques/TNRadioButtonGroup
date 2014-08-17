@@ -66,6 +66,14 @@
     return _rectangleHeight;
 }
 
+- (CGFloat)borderLineThickness {
+	if( !_borderLineThickness ){
+        _borderLineThickness = 2.0f;
+    }
+    
+    return _borderLineThickness;
+}
+
 
 
 @end
