@@ -41,6 +41,28 @@
     [super setup];
 }
 
+- (void)update {
+	[super update];
+
+    self.radioButton.frame = CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight);
+
+	[self updateBorder];
+	[self updateRectangle];
+}
+
+- (void)updateBorder {
+   self.border.frame = CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight);
+    self.border.lineWidth = self.data.borderLineThickness;
+    self.border.strokeColor = self.data.borderColor.CGColor;
+    self.border.fillColor = [UIColor clearColor].CGColor;
+}
+
+- (void)updateRectangle {
+    self.rectangle.frame = CGRectMake((self.border.frame.size.width - self.data.rectangleWidth) / 2, (self.border.frame.size.height - self.data.rectangleHeight) / 2, self.data.rectangleWidth, self.data.rectangleHeight);
+    self.rectangle.lineWidth = 0;
+    self.rectangle.fillColor = self.data.rectangleColor.CGColor;
+}
+
 - (void)createRadioButton {
     self.radioButton = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight)];
     
@@ -50,23 +72,17 @@
     
     self.border = [CAShapeLayer layer];
     self.border.path = borderPath.CGPath;
-    self.border.frame = CGRectMake(0, 0, self.data.borderWidth, self.data.borderHeight);
-    self.border.lineWidth = self.data.borderLineThickness;
-    self.border.strokeColor = self.data.borderColor.CGColor;
-    self.border.fillColor = [UIColor clearColor].CGColor;
-    
+	[self updateBorder];
+
     [self.radioButton.layer addSublayer:self.border];
-    
+
     self.rectangle = [CAShapeLayer layer];
     self.rectangle.path = rectangularPath.CGPath;
-    self.rectangle.frame = CGRectMake((self.border.frame.size.width - self.data.rectangleWidth) / 2, (self.border.frame.size.height - self.data.rectangleHeight) / 2, self.data.rectangleWidth, self.data.rectangleHeight);
-    self.rectangle.lineWidth = 0;
-    self.rectangle.fillColor = self.data.rectangleColor.CGColor;
-    
+	[self updateRectangle];
+
     [self.radioButton.layer addSublayer:self.rectangle];
     
     [self addSubview:self.radioButton];
-    
 }
 
 #pragma mark - Animations
