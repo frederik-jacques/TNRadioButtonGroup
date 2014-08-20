@@ -43,6 +43,12 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     self.frame = CGRectMake(0, 0, self.widthOfComponent, self.heightOfComponent);
 }
 
+ -(void)update {
+	for (TNRadioButton *radioButton in self.radioButtons) {
+		[radioButton update];
+	}
+}
+
 - (void)createRadioButtons {
     
     int xPos = _itemsInsets.left;

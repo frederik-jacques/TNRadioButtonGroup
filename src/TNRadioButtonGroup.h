@@ -33,4 +33,5 @@ typedef enum : NSUInteger {
 
 - (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData layout:(TNRadioButtonGroupLayout)layout;
 - (void)create;
+- (void)update;
 @end
