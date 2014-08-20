@@ -34,6 +34,19 @@
     self.frame = self.btnHidden.frame;
 }
 
+- (void)update {
+	[self updateLabel];
+}
+
+- (void)updateLabel {
+    self.lblLabel.backgroundColor = [UIColor clearColor];
+    self.lblLabel.numberOfLines = 0;
+    self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.lblLabel.font = self.data.labelFont;
+    self.lblLabel.textColor = self.data.labelColor;
+    self.lblLabel.text = self.data.labelText;
+}
+
 - (void)createRadioButton {}
 
 - (void)createLabel {
@@ -51,12 +64,7 @@
     }
 
     self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelSize.height) / 2, labelSize.width, labelSize.height)];
-    self.lblLabel.backgroundColor = [UIColor clearColor];
-    self.lblLabel.numberOfLines = 0;
-    self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.lblLabel.font = self.data.labelFont;
-    self.lblLabel.textColor = self.data.labelColor;
-    self.lblLabel.text = self.data.labelText;
+	[self updateLabel];
     [self addSubview:self.lblLabel];
 }
 
