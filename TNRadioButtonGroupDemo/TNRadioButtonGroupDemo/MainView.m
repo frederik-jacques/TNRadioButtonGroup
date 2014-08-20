@@ -59,6 +59,14 @@
     [self addSubview:self.sexGroup];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
+
+	// show how update data works...
+
+    alienData.borderColor = [UIColor redColor];
+    alienData.circleColor = [UIColor redColor];
+
+	[self.sexGroup update];
+
 }
 
 - (void)createVerticalList {
@@ -94,6 +102,13 @@
     [self addSubview:self.hobbiesGroup];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hobbiesGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.hobbiesGroup];
+
+	// show how update data works...
+
+    programmingData.borderColor = [UIColor redColor];
+    programmingData.rectangleColor = [UIColor redColor];
+
+	[self.hobbiesGroup update];
 
 }
 
