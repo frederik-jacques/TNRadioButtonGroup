@@ -40,6 +40,12 @@
     [super setup];
 }
 
+- (void)update {
+	[super update];
+
+    self.imageView.image = ( self.data.selected ) ? self.data.selectedImage : self.data.unselectedImage;
+}
+
 - (void)createRadioButton {    
     self.radioButton = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.data.unselectedImage.size.width, self.data.unselectedImage.size.height)];
     

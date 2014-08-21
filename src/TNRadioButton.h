@@ -29,6 +29,7 @@
 
 - (instancetype)initWithData:(TNRadioButtonData *)data;
 - (void)setup;
+- (void)update;
 - (void)selectWithAnimation:(BOOL)animated;
 
 @end

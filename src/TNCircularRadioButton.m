@@ -41,6 +41,28 @@
     [super setup];
 }
 
+- (void)update {
+	[super update];
+
+    self.radioButton.frame = CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius);
+
+	[self updateBorder];
+	[self updateCircle];
+}
+
+- (void)updateBorder {
+    self.border.frame = CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius);
+    self.border.lineWidth = self.data.circleLineThickness;
+    self.border.strokeColor = self.data.borderColor.CGColor;
+    self.border.fillColor = [UIColor clearColor].CGColor;
+}
+
+- (void)updateCircle {
+    self.circle.frame = CGRectMake((self.border.frame.size.width - self.data.circleRadius) / 2, (self.border.frame.size.height - self.data.circleRadius) / 2, self.data.circleRadius, self.data.circleRadius);
+    self.circle.lineWidth = 0;
+    self.circle.fillColor = self.data.circleColor.CGColor;
+}
+
 - (void)createRadioButton {
     self.radioButton = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius)];
     
@@ -50,19 +72,14 @@
     
     self.border = [CAShapeLayer layer];
     self.border.path = borderPath.CGPath;
-    self.border.frame = CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius);
-    self.border.lineWidth = self.data.circleLineThickness;
-    self.border.strokeColor = self.data.borderColor.CGColor;
-    self.border.fillColor = [UIColor clearColor].CGColor;
-    
+	[self updateBorder];
+
     [self.radioButton.layer addSublayer:self.border];
     
     self.circle = [CAShapeLayer layer];
     self.circle.path = circlePath.CGPath;
-    self.circle.frame = CGRectMake((self.border.frame.size.width - self.data.circleRadius) / 2, (self.border.frame.size.height - self.data.circleRadius) / 2, self.data.circleRadius, self.data.circleRadius);
-    self.circle.lineWidth = 0;
-    self.circle.fillColor = self.data.circleColor.CGColor;
-    
+	[self updateCircle];
+
     [self.radioButton.layer addSublayer:self.circle];
     
     [self addSubview:self.radioButton];
