@@ -24,6 +24,7 @@ typedef enum : NSUInteger {
 @property (nonatomic) CGPoint position;
 @property (nonatomic) NSInteger marginBetweenItems;
 @property (nonatomic) UIEdgeInsets itemsInsets;
+@property (nonatomic) NSInteger rowItemCount;
 
 @property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, strong) UIColor *labelColor;

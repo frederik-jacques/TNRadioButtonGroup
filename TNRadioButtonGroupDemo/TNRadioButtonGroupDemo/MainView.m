@@ -51,11 +51,23 @@
     alienData.circleColor = [UIColor blackColor];
     alienData.borderRadius = 12;
     alienData.circleRadius = 5;
+
+    TNCircularRadioButtonData *noData = [TNCircularRadioButtonData new];
+    noData.labelText = @"noData";
+    noData.identifier = @"noData";
+    noData.selected = NO;
+    noData.borderColor = [UIColor blackColor];
+    noData.circleColor = [UIColor blackColor];
+    noData.borderRadius = 12;
+    noData.circleRadius = 5;
     
-    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData] layout:TNRadioButtonGroupLayoutHorizontal];
+    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData, noData] layout:TNRadioButtonGroupLayoutHorizontal];
     self.sexGroup.identifier = @"Sex group";
+    self.sexGroup.marginBetweenItems = 15;
+    self.sexGroup.itemsInsets = UIEdgeInsetsMake(15, 15, 0, 0);
+    self.sexGroup.rowItemCount = 2;
     [self.sexGroup create];
-    self.sexGroup.position = CGPointMake(25, 175);
+    self.sexGroup.position = CGPointMake(0, 145);
     [self addSubview:self.sexGroup];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];

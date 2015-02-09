@@ -31,6 +31,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         self.layout = layout;
         self.marginBetweenItems = 15;
 		self.itemsInsets = UIEdgeInsetsZero;
+        self.rowItemCount = 3;
     }
     
     return self;
@@ -53,9 +54,10 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     
     int xPos = _itemsInsets.left;
     int yPos = _itemsInsets.top;
+    int maxWidth = 0;
     int maxHeight = 0;
     int i = 0;
-    
+
     NSMutableArray *tmp = [NSMutableArray new];
     
     for (TNRadioButtonData *data in self.radioButtonData) {
@@ -83,20 +85,28 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         radioButton.delegate = self;
 
         CGRect frame;
-        
+        int rows = (i + self.rowItemCount) / self.rowItemCount;
         if( self.layout == TNRadioButtonGroupLayoutHorizontal ){
-            frame = CGRectMake(xPos, _itemsInsets.top, radioButton.frame.size.width, radioButton.frame.size.height);
+            if(i % self.rowItemCount == 0){
+                xPos = _itemsInsets.left;
+            }else{
+                yPos -= radioButton.frame.size.height + self.marginBetweenItems;
+            }
+            frame = CGRectMake(xPos, yPos, radioButton.frame.size.width, radioButton.frame.size.height);
+            maxWidth = self.rowItemCount * (radioButton.frame.size.width + self.marginBetweenItems);
+            maxHeight = rows * (radioButton.frame.size.height + self.marginBetweenItems) + self.marginBetweenItems;
         }else{
             frame = CGRectMake(_itemsInsets.left, yPos, radioButton.frame.size.width, radioButton.frame.size.height);
         }
         
         radioButton.frame = frame;
         [self addSubview:radioButton];
-        
+
         xPos += radioButton.frame.size.width + self.marginBetweenItems;
         yPos += radioButton.frame.size.height + self.marginBetweenItems;
+        maxWidth = MAX(maxWidth, radioButton.frame.size.width);
         maxHeight = MAX(maxHeight, radioButton.frame.size.height);
-        
+
         if( self.layout == TNRadioButtonGroupLayoutVertical ){
             maxHeight = yPos;
         }
@@ -109,7 +119,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         i++;
     }
     
-    self.widthOfComponent = xPos;
+    self.widthOfComponent = maxWidth;
     self.heightOfComponent = maxHeight;
     self.radioButtons = [NSArray arrayWithArray:tmp];
 }
