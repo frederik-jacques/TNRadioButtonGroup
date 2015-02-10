@@ -30,6 +30,8 @@
 		86CEDBA31907046D004B016A /* TNRectangularRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA21907046D004B016A /* TNRectangularRadioButton.m */; };
 		86CEDBA619070476004B016A /* TNImageRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA519070476004B016A /* TNImageRadioButtonData.m */; };
 		86CEDBA919070483004B016A /* TNImageRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEDBA819070483004B016A /* TNImageRadioButton.m */; };
+		C8EE178D1A88B356001A1587 /* TNFillRadioButtonData.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EE178C1A88B356001A1587 /* TNFillRadioButtonData.m */; };
+		C8EE17901A88B3B4001A1587 /* TNFillRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EE178F1A88B3B4001A1587 /* TNFillRadioButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		86CEDBA519070476004B016A /* TNImageRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageRadioButtonData.m; path = ../../src/TNImageRadioButtonData.m; sourceTree = "<group>"; };
 		86CEDBA719070483004B016A /* TNImageRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageRadioButton.h; path = ../../src/TNImageRadioButton.h; sourceTree = "<group>"; };
 		86CEDBA819070483004B016A /* TNImageRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageRadioButton.m; path = ../../src/TNImageRadioButton.m; sourceTree = "<group>"; };
+		C8EE178B1A88B356001A1587 /* TNFillRadioButtonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNFillRadioButtonData.h; path = ../../src/TNFillRadioButtonData.h; sourceTree = "<group>"; };
+		C8EE178C1A88B356001A1587 /* TNFillRadioButtonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNFillRadioButtonData.m; path = ../../src/TNFillRadioButtonData.m; sourceTree = "<group>"; };
+		C8EE178E1A88B3B4001A1587 /* TNFillRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNFillRadioButton.h; path = ../../src/TNFillRadioButton.h; sourceTree = "<group>"; };
+		C8EE178F1A88B3B4001A1587 /* TNFillRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNFillRadioButton.m; path = ../../src/TNFillRadioButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +210,7 @@
 		86CEDB6D1906B211004B016A /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				C8EE17891A88B2E2001A1587 /* Fill */,
 				86CEDB6F1906B22E004B016A /* Base */,
 				86CEDB6E1906B229004B016A /* Circular */,
 				86CEDB8D1906FDF5004B016A /* Rectangle */,
@@ -295,6 +302,25 @@
 			children = (
 				86CEDBA419070476004B016A /* TNImageRadioButtonData.h */,
 				86CEDBA519070476004B016A /* TNImageRadioButtonData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		C8EE17891A88B2E2001A1587 /* Fill */ = {
+			isa = PBXGroup;
+			children = (
+				C8EE178A1A88B2F8001A1587 /* Data */,
+				C8EE178E1A88B3B4001A1587 /* TNFillRadioButton.h */,
+				C8EE178F1A88B3B4001A1587 /* TNFillRadioButton.m */,
+			);
+			name = Fill;
+			sourceTree = "<group>";
+		};
+		C8EE178A1A88B2F8001A1587 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C8EE178B1A88B356001A1587 /* TNFillRadioButtonData.h */,
+				C8EE178C1A88B356001A1587 /* TNFillRadioButtonData.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -394,10 +420,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EE178D1A88B356001A1587 /* TNFillRadioButtonData.m in Sources */,
 				86465FE41906ABD200E7FDE9 /* AppDelegate.m in Sources */,
 				86CEDBA019070464004B016A /* TNRectangularRadioButtonData.m in Sources */,
 				86CEDB8C1906FDEA004B016A /* TNCircularRadioButtonData.m in Sources */,
 				86CEDB891906FDE1004B016A /* TNRadioButtonData.m in Sources */,
+				C8EE17901A88B3B4001A1587 /* TNFillRadioButton.m in Sources */,
 				86465FE01906ABD200E7FDE9 /* main.m in Sources */,
 				86CEDB721906B4F9004B016A /* MainViewController.m in Sources */,
 				86CEDBA31907046D004B016A /* TNRectangularRadioButton.m in Sources */,

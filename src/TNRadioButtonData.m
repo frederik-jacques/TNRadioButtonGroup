@@ -17,12 +17,23 @@
 }
 
 #pragma mark - Getters and setters
+-(NSInteger)labelMarginLeft {
+
+    if (_labelMarginLeft < 0) {
+        _labelMarginLeft = 0;
+    }else{
+        _labelMarginLeft = 15;
+    }
+
+    return _labelMarginLeft;
+}
+
 -(UIFont *)labelFont {
-	
+
 	if (!_labelFont) {
 		_labelFont = [UIFont systemFontOfSize:14.0f];
 	}
-	
+
 	return _labelFont;
 }
 

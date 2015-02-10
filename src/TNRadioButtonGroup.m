@@ -66,13 +66,15 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         
         if( !data.labelFont) data.labelFont = self.labelFont;
         if( !data.labelColor) data.labelColor = self.labelColor;
-        
+
         if( [data isKindOfClass:[TNCircularRadioButtonData class]] ){
             radioButton = [[TNCircularRadioButton alloc] initWithData:(TNCircularRadioButtonData *)data];
         }else if( [data isKindOfClass:[TNRectangularRadioButtonData class]] ){
             radioButton = [[TNRectangularRadioButton alloc] initWithData:(TNRectangularRadioButtonData *)data];
         }else if( [data isKindOfClass:[TNImageRadioButtonData class]] ){
             radioButton = [[TNImageRadioButton alloc] initWithData:(TNImageRadioButtonData *)data];
+        }else {
+            radioButton = [[TNFillRadioButton alloc] initWithData:(TNFillRadioButtonData *)data];
         }
         
         // If there is already a radio button selected ... deselect the current one
@@ -85,7 +87,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         radioButton.delegate = self;
 
         CGRect frame;
-        int rows = (i + self.rowItemCount) / self.rowItemCount;
+        long rows = (i + self.rowItemCount) / self.rowItemCount;
         if( self.layout == TNRadioButtonGroupLayoutHorizontal ){
             if(i % self.rowItemCount == 0){
                 xPos = _itemsInsets.left;

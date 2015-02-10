@@ -39,12 +39,17 @@
 }
 
 - (void)updateLabel {
-    self.lblLabel.backgroundColor = [UIColor clearColor];
-    self.lblLabel.numberOfLines = 0;
-    self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.lblLabel.font = self.data.labelFont;
-    self.lblLabel.textColor = self.data.labelColor;
-    self.lblLabel.text = self.data.labelText;
+    self.lblButton.backgroundColor = [UIColor clearColor];
+    self.lblButton.titleLabel.font = self.data.labelFont;
+    [self.lblButton setTitleColor:self.data.labelColor forState:UIControlStateNormal];
+    [self.lblButton setTitle:self.data.labelText forState:UIControlStateNormal];
+
+    if(self.data.labelBorderWidth){
+        self.lblButton.layer.masksToBounds = YES;
+        self.lblButton.layer.cornerRadius = self.data.labelBorderCornerRadius ?: 5.0;
+        self.lblButton.layer.borderWidth = self.data.labelBorderWidth ?: 1.0;
+        self.lblButton.layer.borderColor = self.data.labelBorderColor ?: [UIColor grayColor].CGColor;
+    }
 }
 
 - (void)createRadioButton {}
@@ -63,17 +68,17 @@
         
     }
 
-    self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelSize.height) / 2, labelSize.width, labelSize.height)];
-	[self updateLabel];
-    [self addSubview:self.lblLabel];
+    self.lblButton = [[UIButton alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + self.data.labelMarginLeft, (self.radioButton.frame.size.height - labelSize.height) / 2, self.data.labelWidth ?: labelSize.width, self.data.labelHeight ?: labelSize.height)];
+    [self updateLabel];
+    [self addSubview:self.lblButton];
 }
 
 - (void)createHiddenButton {
     
-    int height = MAX(self.lblLabel.frame.size.height, self.radioButton.frame.size.height);
+    int height = MAX(self.lblButton.frame.size.height, self.radioButton.frame.size.height);
     
     self.btnHidden = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.btnHidden.frame = CGRectMake(0, 0, self.lblLabel.frame.origin.x + self.lblLabel.frame.size.width, height);
+    self.btnHidden.frame = CGRectMake(0, 0, self.lblButton.frame.origin.x + self.lblButton.frame.size.width, height);
     [self addSubview:self.btnHidden];
     
     [self.btnHidden addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];

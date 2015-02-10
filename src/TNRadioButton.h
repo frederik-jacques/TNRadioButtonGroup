@@ -14,6 +14,7 @@
 #import "TNCircularRadioButtonData.h"
 #import "TNRectangularRadioButtonData.h"
 #import "TNImageRadioButtonData.h"
+#import "TNFillRadioButtonData.h"
 
 @interface TNRadioButton : UIView <TNRadioButtonGroupProtocol>
 
@@ -22,7 +23,7 @@
 @property (nonatomic, strong) TNRadioButtonData *data;
 
 @property (nonatomic, strong) UIView *radioButton;
-@property (nonatomic, strong) UILabel *lblLabel;
+@property (nonatomic, strong) UIButton *lblButton;
 @property (nonatomic, strong) UIButton *btnHidden;
 
 @property (nonatomic, weak) id<TNRadioButtonDelegate> delegate;

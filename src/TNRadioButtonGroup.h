@@ -10,6 +10,7 @@
 #import "TNCircularRadioButton.h"
 #import "TNRectangularRadioButton.h"
 #import "TNImageRadioButton.h"
+#import "TNFillRadioButton.h"
 
 extern NSString *const SELECTED_RADIO_BUTTON_CHANGED;
 
