@@ -10,6 +10,7 @@
 #import "TNCircularRadioButton.h"
 #import "TNRectangularRadioButton.h"
 #import "TNImageRadioButton.h"
+#import "TNFillRadioButton.h"
 
 extern NSString *const SELECTED_RADIO_BUTTON_CHANGED;
 
@@ -24,6 +25,7 @@ typedef enum : NSUInteger {
 @property (nonatomic) CGPoint position;
 @property (nonatomic) NSInteger marginBetweenItems;
 @property (nonatomic) UIEdgeInsets itemsInsets;
+@property (nonatomic) NSInteger rowItemCount;
 
 @property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, strong) UIColor *labelColor;

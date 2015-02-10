@@ -16,5 +16,6 @@
 @property (nonatomic, strong) TNRadioButtonGroup *sexGroup;
 @property (nonatomic, strong) TNRadioButtonGroup *hobbiesGroup;
 @property (nonatomic, strong) TNRadioButtonGroup *temperatureGroup;
+@property (nonatomic, strong) TNRadioButtonGroup *noGroup;
 
 @end

@@ -22,6 +22,7 @@
         [self createHorizontalList];
         [self createVerticalList];
         [self createHorizontalListWithImage];
+        [self createHorizontalListWithBg];
     }
     
     return self;
@@ -51,11 +52,23 @@
     alienData.circleColor = [UIColor blackColor];
     alienData.borderRadius = 12;
     alienData.circleRadius = 5;
+
+    TNCircularRadioButtonData *noData = [TNCircularRadioButtonData new];
+    noData.labelText = @"noData";
+    noData.identifier = @"noData";
+    noData.selected = NO;
+    noData.borderColor = [UIColor blackColor];
+    noData.circleColor = [UIColor blackColor];
+    noData.borderRadius = 12;
+    noData.circleRadius = 5;
     
-    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData] layout:TNRadioButtonGroupLayoutHorizontal];
+    self.sexGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[maleData, femaleData, alienData, noData] layout:TNRadioButtonGroupLayoutHorizontal];
     self.sexGroup.identifier = @"Sex group";
+    self.sexGroup.marginBetweenItems = 15;
+    self.sexGroup.itemsInsets = UIEdgeInsetsMake(15, 15, 0, 0);
+    self.sexGroup.rowItemCount = 2;
     [self.sexGroup create];
-    self.sexGroup.position = CGPointMake(25, 175);
+    self.sexGroup.position = CGPointMake(0, 145);
     [self addSubview:self.sexGroup];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
@@ -137,6 +150,41 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(temperatureGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.temperatureGroup];
 }
 
+- (void)createHorizontalListWithBg {
+    TNFillRadioButtonData *firstData = [TNFillRadioButtonData new];
+    firstData.labelText = @"First";
+    firstData.identifier = @"First";
+    firstData.selected = NO;
+    firstData.labelBgNormalColor = [UIColor grayColor];
+    firstData.labelBgSelectedColor = [UIColor redColor];
+    firstData.labelMarginLeft = -1;
+    firstData.labelWidth = 60.0f;
+    firstData.labelHeight = 30.0f;
+    firstData.labelBorderWidth = 1.0;
+    firstData.labelBorderColor = [UIColor brownColor].CGColor;
+    firstData.labelBorderCornerRadius = 5.0;
+
+    TNFillRadioButtonData *secondData = [TNFillRadioButtonData new];
+    secondData.labelText = @"Second";
+    secondData.identifier = @"Second";
+    secondData.selected = NO;
+    secondData.labelBgNormalColor = [UIColor grayColor];
+    secondData.labelBgSelectedColor = [UIColor redColor];
+    secondData.labelMarginLeft = -1;
+    secondData.labelWidth = 60.0f;
+    secondData.labelHeight = 30.0f;
+
+
+    self.noGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[firstData, secondData] layout:TNRadioButtonGroupLayoutHorizontal];
+    self.noGroup.identifier = @"No Group";
+    [self.noGroup create];
+    self.noGroup.position = CGPointMake(0, 500);
+
+    [self addSubview:self.noGroup];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.noGroup];
+}
+
 - (void)sexGroupUpdated:(NSNotification *)notification {
     NSLog(@"[MainView] Sex group updated to %@", self.sexGroup.selectedRadioButton.data.identifier);
 }
@@ -149,10 +197,15 @@
     NSLog(@"[MainView] Temperature group updated to %@", self.temperatureGroup.selectedRadioButton.data.identifier);
 }
 
+- (void)noGroupUpdated:(NSNotification *)notification {
+    NSLog(@"[MainView] No. group updated to %@", self.noGroup.selectedRadioButton.data.identifier);
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.hobbiesGroup];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.temperatureGroup];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SELECTED_RADIO_BUTTON_CHANGED object:self.noGroup];
 }
 
 @end
