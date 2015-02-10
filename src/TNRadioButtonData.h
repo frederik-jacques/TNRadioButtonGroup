@@ -15,6 +15,7 @@
 @property (nonatomic) BOOL selected;
 
 @property (nonatomic, copy) NSString *labelText;
+
 @property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, strong) UIColor *labelColor;
 

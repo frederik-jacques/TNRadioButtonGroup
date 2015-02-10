@@ -10,8 +10,6 @@
 
 @interface TNFillRadioButtonData : TNRadioButtonData
 
-@property (nonatomic, strong) UIColor *labelBorderNormalColor;
-@property (nonatomic, strong) UIColor *labelBorderSelectedColor;
 @property (nonatomic, strong) UIColor *labelBgNormalColor;
 @property (nonatomic, strong) UIColor *labelBgSelectedColor;
 

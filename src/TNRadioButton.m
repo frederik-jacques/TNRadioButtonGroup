@@ -55,18 +55,9 @@
 - (void)createRadioButton {}
 
 - (void)createLabel {
-    
-    CGSize labelSize;
-    
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        labelSize = [self.data.labelText sizeWithFont:self.data.labelFont forWidth:150 lineBreakMode:NSLineBreakByWordWrapping];
-        
-    } else {
-        CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.data.labelFont} context:nil];
-        
-        labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
-        
-    }
+
+    CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.data.labelFont} context:nil];
+    CGSize labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
 
     self.lblButton = [[UIButton alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + self.data.labelMarginLeft, (self.radioButton.frame.size.height - labelSize.height) / 2, self.data.labelWidth ?: labelSize.width, self.data.labelHeight ?: labelSize.height)];
     [self updateLabel];
