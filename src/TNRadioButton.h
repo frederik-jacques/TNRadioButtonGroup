@@ -17,6 +17,8 @@
 
 @interface TNRadioButton : UIView <TNRadioButtonGroupProtocol>
 
+@property (nonatomic, assign) BOOL multipleOptions;
+
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *label;
 @property (nonatomic, strong) TNRadioButtonData *data;

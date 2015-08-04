@@ -96,6 +96,7 @@
     
     self.hobbiesGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[snowboardData,tennisData, programmingData] layout:TNRadioButtonGroupLayoutVertical];
     self.hobbiesGroup.identifier = @"Hobbies group";
+    self.hobbiesGroup.multipleOptions = YES;
     [self.hobbiesGroup create];
     self.hobbiesGroup.position = CGPointMake(25, 265);
 

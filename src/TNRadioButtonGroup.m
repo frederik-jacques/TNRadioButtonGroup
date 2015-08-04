@@ -31,6 +31,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         self.layout = layout;
         self.marginBetweenItems = 15;
 		self.itemsInsets = UIEdgeInsetsZero;
+        self.multipleOptions = NO;
     }
     
     return self;
@@ -81,6 +82,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         data.tag = i;
         
         radioButton.delegate = self;
+        radioButton.multipleOptions = self.multipleOptions;
 
         CGRect frame;
         
@@ -119,7 +121,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     
     for (TNRadioButton *rb in self.radioButtons) {
         
-        if( rb != radioButton ){
+        if( rb != radioButton && !self.multipleOptions){
             rb.data.selected = !radioButton.data.selected;
         }
 

@@ -81,7 +81,7 @@
 
 - (void)buttonTapped:(id)sender {
     
-    if( !self.data.selected ){
+    if( !self.data.selected || self.multipleOptions ){
         self.data.selected = !self.data.selected;
         
         if ([self.delegate respondsToSelector:@selector(radioButtonDidChange:)]) {
