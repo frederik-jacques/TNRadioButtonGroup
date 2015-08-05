@@ -64,12 +64,23 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         TNRadioButton *radioButton = nil;
         
         if( !data.labelFont) data.labelFont = self.labelFont;
-        if( !data.labelColor) data.labelColor = self.labelColor;
+        if( !data.labelActiveColor) data.labelActiveColor = self.textActiveColor;
+        if( !data.labelPassiveColor) data.labelPassiveColor = self.textPasiveColor;
         
         if( [data isKindOfClass:[TNCircularRadioButtonData class]] ){
-            radioButton = [[TNCircularRadioButton alloc] initWithData:(TNCircularRadioButtonData *)data];
+            TNCircularRadioButtonData *rData = (TNCircularRadioButtonData *)data;
+            rData.borderActiveColor = self.controlActiveColor;
+            rData.borderPassiveColor = self.controlPasiveColor;
+            rData.circleActiveColor = self.controlActiveColor;
+            rData.circlePassiveColor = self.controlPasiveColor;
+            radioButton = [[TNCircularRadioButton alloc] initWithData:rData];
         }else if( [data isKindOfClass:[TNRectangularRadioButtonData class]] ){
-            radioButton = [[TNRectangularRadioButton alloc] initWithData:(TNRectangularRadioButtonData *)data];
+            TNRectangularRadioButtonData *rData = (TNRectangularRadioButtonData *)data;
+            rData.borderActiveColor = self.controlActiveColor;
+            rData.borderPassiveColor = self.controlPasiveColor;
+            rData.rectangleActiveColor = self.controlActiveColor;
+            rData.rectanglePassiveColor = self.controlPasiveColor;
+            radioButton = [[TNRectangularRadioButton alloc] initWithData:rData];
         }else if( [data isKindOfClass:[TNImageRadioButtonData class]] ){
             radioButton = [[TNImageRadioButton alloc] initWithData:(TNImageRadioButtonData *)data];
         }

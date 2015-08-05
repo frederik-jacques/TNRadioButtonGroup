@@ -16,6 +16,7 @@
 @property (nonatomic) BOOL selected;
 
 @property (nonatomic, strong) UIFont *labelFont;
-@property (nonatomic, strong) UIColor *labelColor;
+@property (nonatomic, strong) UIColor *labelActiveColor;
+@property (nonatomic, strong) UIColor *labelPassiveColor;
 
 @end

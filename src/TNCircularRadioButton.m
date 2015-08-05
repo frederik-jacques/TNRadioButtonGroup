@@ -53,14 +53,14 @@
 - (void)updateBorder {
     self.border.frame = CGRectMake(0, 0, self.data.borderRadius, self.data.borderRadius);
     self.border.lineWidth = self.data.circleLineThickness;
-    self.border.strokeColor = self.data.borderColor.CGColor;
+    self.border.strokeColor = self.data.selected?self.data.borderActiveColor.CGColor:self.data.borderPassiveColor.CGColor;
     self.border.fillColor = [UIColor clearColor].CGColor;
 }
 
 - (void)updateCircle {
     self.circle.frame = CGRectMake((self.border.frame.size.width - self.data.circleRadius) / 2, (self.border.frame.size.height - self.data.circleRadius) / 2, self.data.circleRadius, self.data.circleRadius);
     self.circle.lineWidth = 0;
-    self.circle.fillColor = self.data.circleColor.CGColor;
+    self.circle.fillColor = self.data.selected?self.data.circleActiveColor.CGColor:self.data.circlePassiveColor.CGColor;
 }
 
 - (void)createRadioButton {
@@ -88,6 +88,8 @@
 
 #pragma mark - Animations
 - (void)selectWithAnimation:(BOOL)animated {
+    [super selectWithAnimation:animated];
+
     NSNumber *scaleValue = (self.data.selected) ? @1 : @0;
     
     if( animated ){

@@ -43,7 +43,7 @@
     self.lblLabel.numberOfLines = 0;
     self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.lblLabel.font = self.data.labelFont;
-    self.lblLabel.textColor = self.data.labelColor;
+    self.lblLabel.textColor = self.data.selected?self.data.labelActiveColor:self.data.labelPassiveColor;
     self.lblLabel.text = self.data.labelText;
 }
 
@@ -92,6 +92,8 @@
 }
 
 #pragma mark - Animations
-- (void)selectWithAnimation:(BOOL)animated {}
+- (void)selectWithAnimation:(BOOL)animated {
+    [self updateLabel];
+}
 
 @end

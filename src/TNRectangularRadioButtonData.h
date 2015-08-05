@@ -10,8 +10,10 @@
 
 @interface TNRectangularRadioButtonData : TNRadioButtonData
 
-@property (nonatomic, strong) UIColor *borderColor;
-@property (nonatomic, strong) UIColor *rectangleColor;
+@property (nonatomic, strong) UIColor *borderActiveColor;
+@property (nonatomic, strong) UIColor *borderPassiveColor;
+@property (nonatomic, strong) UIColor *rectangleActiveColor;
+@property (nonatomic, strong) UIColor *rectanglePassiveColor;
 
 @property (nonatomic) NSInteger borderWidth;
 @property (nonatomic) NSInteger borderHeight;
