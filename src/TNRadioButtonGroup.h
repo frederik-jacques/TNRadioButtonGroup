@@ -29,9 +29,9 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIColor *labelColor;
 
 @property (nonatomic, strong) UIColor *textActiveColor;
-@property (nonatomic, strong) UIColor *textPasiveColor;
+@property (nonatomic, strong) UIColor *textPassiveColor;
 @property (nonatomic, strong) UIColor *controlActiveColor;
-@property (nonatomic, strong) UIColor *controlPasiveColor;
+@property (nonatomic, strong) UIColor *controlPassiveColor;
 
 @property (nonatomic, strong) NSArray *radioButtons;
 @property (nonatomic, weak) TNRadioButton *selectedRadioButton;
