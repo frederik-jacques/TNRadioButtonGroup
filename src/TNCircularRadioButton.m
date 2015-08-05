@@ -89,6 +89,7 @@
 #pragma mark - Animations
 - (void)selectWithAnimation:(BOOL)animated {
     [super selectWithAnimation:animated];
+    [self update];
 
     NSNumber *scaleValue = (self.data.selected) ? @1 : @0;
     
