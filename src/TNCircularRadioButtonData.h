@@ -10,8 +10,10 @@
 
 @interface TNCircularRadioButtonData : TNRadioButtonData
 
-@property (nonatomic, strong) UIColor *borderColor;
-@property (nonatomic, strong) UIColor *circleColor;
+@property (nonatomic, strong) UIColor *borderActiveColor;
+@property (nonatomic, strong) UIColor *borderPassiveColor;
+@property (nonatomic, strong) UIColor *circleActiveColor;
+@property (nonatomic, strong) UIColor *circlePassiveColor;
 
 @property (nonatomic) NSInteger borderRadius;
 @property (nonatomic) NSInteger circleRadius;

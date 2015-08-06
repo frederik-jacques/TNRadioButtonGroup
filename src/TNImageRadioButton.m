@@ -58,7 +58,8 @@
 
 #pragma mark - Animations
 - (void)selectWithAnimation:(BOOL)animated {
-    
+    [super selectWithAnimation:animated];
+
     self.imageView.image = ( self.data.selected ) ? self.data.selectedImage : self.data.unselectedImage;
     
 }

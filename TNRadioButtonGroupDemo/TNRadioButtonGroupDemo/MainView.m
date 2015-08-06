@@ -38,8 +38,6 @@
     femaleData.labelText = @"Female";
     femaleData.identifier = @"female";
     femaleData.selected = NO;
-    femaleData.borderColor = [UIColor blackColor];
-    femaleData.circleColor = [UIColor blackColor];
     femaleData.borderRadius = 12;
     femaleData.circleRadius = 5;
     
@@ -47,8 +45,6 @@
     alienData.labelText = @"Alien";
     alienData.identifier = @"alien";
     alienData.selected = NO;
-    alienData.borderColor = [UIColor blackColor];
-    alienData.circleColor = [UIColor blackColor];
     alienData.borderRadius = 12;
     alienData.circleRadius = 5;
     
@@ -61,9 +57,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.sexGroup];
 
 	// show how update data works...
-
-    alienData.borderColor = [UIColor redColor];
-    alienData.circleColor = [UIColor redColor];
 
 	[self.sexGroup update];
 
@@ -80,8 +73,6 @@
     tennisData.labelText = @"Tennis";
     tennisData.identifier = @"tennis";
     tennisData.selected = YES;
-    tennisData.borderColor = [UIColor blackColor];
-    tennisData.rectangleColor = [UIColor blackColor];
     tennisData.borderWidth = tennisData.borderHeight = 12;
     tennisData.rectangleWidth = tennisData.rectangleHeight = 5;
     
@@ -89,13 +80,15 @@
     programmingData.labelText = @"Programming";
     programmingData.identifier = @"programming";
     programmingData.selected = NO;
-    programmingData.borderColor = [UIColor blackColor];
-    programmingData.rectangleColor = [UIColor blackColor];
     programmingData.borderWidth = programmingData.borderHeight = 12;
     programmingData.rectangleWidth = programmingData.rectangleHeight = 5;
     
     self.hobbiesGroup = [[TNRadioButtonGroup alloc] initWithRadioButtonData:@[snowboardData,tennisData, programmingData] layout:TNRadioButtonGroupLayoutVertical];
     self.hobbiesGroup.identifier = @"Hobbies group";
+    self.hobbiesGroup.textActiveColor = [UIColor redColor];
+    self.hobbiesGroup.textPassiveColor = [UIColor blueColor];
+    self.hobbiesGroup.controlActiveColor = [UIColor greenColor];
+    self.hobbiesGroup.controlPassiveColor = [UIColor cyanColor];
     [self.hobbiesGroup create];
     self.hobbiesGroup.position = CGPointMake(25, 265);
 
@@ -104,9 +97,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hobbiesGroupUpdated:) name:SELECTED_RADIO_BUTTON_CHANGED object:self.hobbiesGroup];
 
 	// show how update data works...
-
-    programmingData.borderColor = [UIColor redColor];
-    programmingData.rectangleColor = [UIColor redColor];
 
 	[self.hobbiesGroup update];
 

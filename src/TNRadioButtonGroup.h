@@ -28,8 +28,15 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, strong) UIColor *labelColor;
 
+@property (nonatomic, strong) UIColor *textActiveColor;
+@property (nonatomic, strong) UIColor *textPassiveColor;
+@property (nonatomic, strong) UIColor *controlActiveColor;
+@property (nonatomic, strong) UIColor *controlPassiveColor;
+
 @property (nonatomic, strong) NSArray *radioButtons;
 @property (nonatomic, weak) TNRadioButton *selectedRadioButton;
+
+@property (nonatomic, assign) BOOL multipleOptions;
 
 - (instancetype)initWithRadioButtonData:(NSArray *)radioButtonData layout:(TNRadioButtonGroupLayout)layout;
 - (void)create;

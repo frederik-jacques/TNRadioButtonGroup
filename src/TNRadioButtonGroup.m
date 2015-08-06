@@ -31,6 +31,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         self.layout = layout;
         self.marginBetweenItems = 15;
 		self.itemsInsets = UIEdgeInsetsZero;
+        self.multipleOptions = NO;
     }
     
     return self;
@@ -63,12 +64,23 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         TNRadioButton *radioButton = nil;
         
         if( !data.labelFont) data.labelFont = self.labelFont;
-        if( !data.labelColor) data.labelColor = self.labelColor;
+        if( !data.labelActiveColor) data.labelActiveColor = self.textActiveColor;
+        if( !data.labelPassiveColor) data.labelPassiveColor = self.textPassiveColor;
         
         if( [data isKindOfClass:[TNCircularRadioButtonData class]] ){
-            radioButton = [[TNCircularRadioButton alloc] initWithData:(TNCircularRadioButtonData *)data];
+            TNCircularRadioButtonData *rData = (TNCircularRadioButtonData *)data;
+            rData.borderActiveColor = self.controlActiveColor;
+            rData.borderPassiveColor = self.controlPassiveColor;
+            rData.circleActiveColor = self.controlActiveColor;
+            rData.circlePassiveColor = self.controlPassiveColor;
+            radioButton = [[TNCircularRadioButton alloc] initWithData:rData];
         }else if( [data isKindOfClass:[TNRectangularRadioButtonData class]] ){
-            radioButton = [[TNRectangularRadioButton alloc] initWithData:(TNRectangularRadioButtonData *)data];
+            TNRectangularRadioButtonData *rData = (TNRectangularRadioButtonData *)data;
+            rData.borderActiveColor = self.controlActiveColor;
+            rData.borderPassiveColor = self.controlPassiveColor;
+            rData.rectangleActiveColor = self.controlActiveColor;
+            rData.rectanglePassiveColor = self.controlPassiveColor;
+            radioButton = [[TNRectangularRadioButton alloc] initWithData:rData];
         }else if( [data isKindOfClass:[TNImageRadioButtonData class]] ){
             radioButton = [[TNImageRadioButton alloc] initWithData:(TNImageRadioButtonData *)data];
         }
@@ -81,6 +93,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
         data.tag = i;
         
         radioButton.delegate = self;
+        radioButton.multipleOptions = self.multipleOptions;
 
         CGRect frame;
         
@@ -119,7 +132,7 @@ NSString *const SELECTED_RADIO_BUTTON_CHANGED = @"selectedRadioButtonChanged";
     
     for (TNRadioButton *rb in self.radioButtons) {
         
-        if( rb != radioButton ){
+        if( rb != radioButton && !self.multipleOptions){
             rb.data.selected = !radioButton.data.selected;
         }
 

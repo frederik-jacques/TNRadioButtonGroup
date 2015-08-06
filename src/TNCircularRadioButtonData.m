@@ -22,22 +22,40 @@
 }
 
 #pragma mark - Getters and setters
-- (UIColor *)borderColor {
+- (UIColor *)borderActiveColor {
     
-    if( !_borderColor ){
-        _borderColor = [UIColor blackColor];
+    if( !_borderActiveColor ){
+        _borderActiveColor = [UIColor blackColor];
     }
     
-    return _borderColor;
+    return _borderActiveColor;
 }
 
-- (UIColor *)circleColor {
+- (UIColor *)borderPassiveColor {
     
-    if( !_circleColor ){
-        _circleColor = [UIColor blackColor];
+    if( !_borderPassiveColor ){
+        _borderPassiveColor = [UIColor blackColor];
     }
     
-    return _circleColor;
+    return _borderPassiveColor;
+}
+
+- (UIColor *)circleActiveColor {
+    
+    if( !_circleActiveColor ){
+        _circleActiveColor = [UIColor blackColor];
+    }
+    
+    return _circleActiveColor;
+}
+
+- (UIColor *)circlePassiveColor {
+    
+    if( !_circlePassiveColor ){
+        _circlePassiveColor = [UIColor blackColor];
+    }
+    
+    return _circlePassiveColor;
 }
 
 - (NSInteger)borderRadius {

@@ -43,7 +43,7 @@
     self.lblLabel.numberOfLines = 0;
     self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.lblLabel.font = self.data.labelFont;
-    self.lblLabel.textColor = self.data.labelColor;
+    self.lblLabel.textColor = self.data.selected?self.data.labelActiveColor:self.data.labelPassiveColor;
     self.lblLabel.text = self.data.labelText;
 }
 
@@ -81,7 +81,7 @@
 
 - (void)buttonTapped:(id)sender {
     
-    if( !self.data.selected ){
+    if( !self.data.selected || self.multipleOptions ){
         self.data.selected = !self.data.selected;
         
         if ([self.delegate respondsToSelector:@selector(radioButtonDidChange:)]) {
@@ -92,6 +92,8 @@
 }
 
 #pragma mark - Animations
-- (void)selectWithAnimation:(BOOL)animated {}
+- (void)selectWithAnimation:(BOOL)animated {
+    [self updateLabel];
+}
 
 @end
