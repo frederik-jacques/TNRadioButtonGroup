@@ -57,10 +57,10 @@
         labelSize = [self.data.labelText sizeWithFont:self.data.labelFont forWidth:150 lineBreakMode:NSLineBreakByWordWrapping];
         
     } else {
-        CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.data.labelFont} context:nil];
+        CGRect labelRect =  [self.data.labelText  boundingRectWithSize:CGSizeMake(self.lblLabel.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin
+                                                            attributes:@{NSFontAttributeName : self.data.labelFont} context:nil];
         
         labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
-        
     }
 
     self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.radioButton.frame.origin.x + self.radioButton.frame.size.width + 15, (self.radioButton.frame.size.height - labelSize.height) / 2, labelSize.width, labelSize.height)];
