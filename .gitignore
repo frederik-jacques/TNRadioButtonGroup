@@ -6,5 +6,6 @@
 #
 # Pods/
 
-
-/TNRadioButtonGroupDemo/.DS_Store
+xcuserdata
+*.xcworkspace
+.DS_Store
