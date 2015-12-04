@@ -25,6 +25,11 @@ Installation
 * Add ``` pod 'TNRadioButtonGroup' ``` to your Podfile
 * Done
 
+##Carthage
+* Add ``` github "frederik-jacques/TNRadioButtonGroup" ``` to your Cartfile.
+* Import the ```TNRadioButton``` framework.
+* Done
+
 How to use
 ==========
 
