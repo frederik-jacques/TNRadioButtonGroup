@@ -16,6 +16,8 @@
 
 @implementation TNImageRadioButton
 
+@dynamic data;
+
 #pragma mark - Initializers
 
 - (instancetype)initWithData:(TNImageRadioButtonData *)data {

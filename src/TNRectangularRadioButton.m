@@ -17,6 +17,8 @@
 
 @implementation TNRectangularRadioButton
 
+@dynamic data;
+
 #pragma mark - Initializers
 
 - (instancetype)initWithData:(TNRectangularRadioButtonData *)data {
