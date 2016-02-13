@@ -21,7 +21,7 @@ Installation
 * Just drag the files in the src folder to your project.
 * Import the radio button class you want to use
 
-##Cocoapods
+##CocoaPods
 * Add ``` pod 'TNRadioButtonGroup' ``` to your Podfile
 * Done
 
