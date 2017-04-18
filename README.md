@@ -17,11 +17,11 @@ The current version supports 3 different radio buttons:
 Installation
 =============
 
-##Manual
+## Manual
 * Just drag the files in the src folder to your project.
 * Import the radio button class you want to use
 
-##Cocoapods
+## Cocoapods
 * Add ``` pod 'TNRadioButtonGroup' ``` to your Podfile
 * Done
 
@@ -121,7 +121,7 @@ And add the object to the view hierarchy.
 
 Done!
 
-##Getting change notifications
+## Getting change notifications
 
 When the state of the radio button group has changed an _NSNotification_ is broadcasted.
 
